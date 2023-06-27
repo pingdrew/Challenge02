@@ -1,16 +1,16 @@
+/* makes all transitions .2 seconds and smooth */
 * {
-  /* justify-content: space-between; */
   transition: all .2s ease-in-out; 
 }
-
+/* makes the header big and nice */
 h1 {
   font-size: 50px;
 }
-
+/* put a space background picture down */
 body{
   background-image: url("./space.jpg");
 }
-
+/* makes the header stick in the same place, and has flex incorporated to better fit screen sizes */
 header {
   display: flex;
   position: fixed;
@@ -24,7 +24,7 @@ header {
   color: #fff;
   z-index: 5;
 }
-
+/* nav section holds all nav links and is at the end of the header on the right. */
 nav {
   display: flex;
   justify-content: flex-end;
@@ -32,19 +32,19 @@ nav {
   width:100vw;
   background-color: #13293d;
 }
-
+/* nav links are white, and have padding */
 nav a {
   color: #fff;
   padding: 20px 20px;
   text-decoration: none;
 }
-
+/* makes all cards able to infinitely stack so i can add more projects and puts them in the middle of the screen */
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
+/* makes the background color white for each individual card and their margin correct for their size. makes all cards border radius nice and smooth */
 .card {
   background-color: #fff;
   box-shadow: 0 0 15px white;
@@ -52,7 +52,7 @@ nav a {
   height: 100%;
   border-radius: 25px;
 }
-
+/* makes card text align in the center and look nice with rounding corners */
 .card p {
   background-color: white;
   color: black;
@@ -61,15 +61,14 @@ nav a {
   padding: 20px;
   width: 40vw;
   border-radius: 25px;
-  box-shadow: 0 0 50px white;
 }
-
+/* makes images 40 percent of view width so two can be at a time */
 .card img {
   width: 40vw;
   border-radius: 25px;
   justify-self: center;
 }
-
+/* large cards have different properties */
 .large {
   box-shadow: 0 0 50px white;
   text-align: center;
@@ -78,19 +77,19 @@ nav a {
   margin: 50px;
   line-height: 50px;
 }
-
+/* about me card has different properties */
 .about-me {
   margin-top: 200px;
   margin-bottom: 20px;
 }
-
+/* about me lines are cool and better looking */
 .about-me ul {
   margin: auto auto;
   margin-left: 2vw;
   text-align: start;
   font-size: 16pt;
 }
-
+/* footer like header but different because footer */
 footer {
   bottom: 0;
   left: 0;
@@ -101,12 +100,12 @@ footer {
   text-align: center;
   color: #fff;
 }
-
+/* when you hover over a card it gets bigger and the glow gets brighter */
 .card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
 }
-
+/* nav gets a line under it and the size gets a little larger */
 nav a:hover {
   background-color: none;
   border-bottom: 5px solid white;
@@ -114,7 +113,7 @@ nav a:hover {
   font-weight: 50px;
   transform: scale(1.1);
 }
-
+/* when u click on it the backgound goes full white and text go black */
 nav a:active {
   box-shadow: 0 0 50 white;
   background-color: white;
@@ -130,19 +129,32 @@ nav a:active {
 .footTitle a:visited {
   color: white;
 }
-
+/* media screens are changing the header and cards to be column and different properties to better fit the mobile users. */
 @media screen and (max-width: 996px) {
   .large{
-    margin-top: 400px;
+    margin-top: 60vh;
     display: block;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   header,
   nav {
     width: 200vw;
     flex-direction: column;
+    font-size: 10pt;
+  }
+
+  nav a {
+    padding: 10px
+  }
+  
+  .card p{
+    width:90vw;
+  } 
+  
+  .card:not(.about-me) img{
+    width:90vw;
+    margin:auto;
   }
 }
