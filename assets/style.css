@@ -1,0 +1,148 @@
+* {
+  /* justify-content: space-between; */
+  transition: all .2s ease-in-out; 
+}
+
+h1 {
+  font-size: 50px;
+}
+
+body{
+  background-image: url("./space.jpg");
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: fit-content;
+  padding: 10px;
+  box-shadow: 0 0 10px black;
+  background: #13293d;
+  color: #fff;
+  z-index: 5;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  width:100vw;
+  background-color: #13293d;
+}
+
+nav a {
+  color: #fff;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 15px white;
+  margin: 20px 20px;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.card p {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 18pt;
+  padding: 20px;
+  width: 40vw;
+  border-radius: 25px;
+  box-shadow: 0 0 50px white;
+}
+
+.card img {
+  width: 40vw;
+  border-radius: 25px;
+  justify-self: center;
+}
+
+.large {
+  box-shadow: 0 0 50px white;
+  text-align: center;
+  display: inline-flex;
+  width: 82vw;
+  margin: 50px;
+  line-height: 50px;
+}
+
+.about-me {
+  margin-top: 200px;
+  margin-bottom: 20px;
+}
+
+.about-me ul {
+  margin: auto auto;
+  margin-left: 2vw;
+  text-align: start;
+  font-size: 16pt;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  margin-top: 10vh;
+  padding: 10px;
+  box-shadow: 0 0 10px black;
+  background: #13293d;
+  text-align: center;
+  color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px white;
+}
+
+nav a:hover {
+  background-color: none;
+  border-bottom: 5px solid white;
+  font-size: 20px;
+  font-weight: 50px;
+  transform: scale(1.1);
+}
+
+nav a:active {
+  box-shadow: 0 0 50 white;
+  background-color: white;
+  color:black;
+}
+
+nav a:active {
+  box-shadow: 0 0 50 white;
+  background-color: white;
+  color:black;
+}
+
+.footTitle a:visited {
+  color: white;
+}
+
+@media screen and (max-width: 996px) {
+  .large{
+    margin-top: 400px;
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  header,
+  nav {
+    width: 200vw;
+    flex-direction: column;
+  }
+}
